@@ -2,7 +2,20 @@
 
 using namespace std;
 
+int f(int n) {
+    if (n == 1 || n == 2) {
+        return 1;
+    }
+    else {
+        return f(n - 1) + f(n - 2);
+    }
+}
+
 int main()
 {
-    cout << "Hello, World!\n";
+    setlocale(LC_ALL, "rus");
+    cout << "Введите n" << endl;
+    int n;
+    cin >> n;
+    cout << f(n) << endl;
 }
